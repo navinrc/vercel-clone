@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
-const AWS = require("aws-sdk");
-const axios = require("axios");
+import AWS from "aws-sdk";
+import axios from "axios";
 
 const MAX_LEN = 5;
 
