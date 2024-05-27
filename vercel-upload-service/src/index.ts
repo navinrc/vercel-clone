@@ -4,7 +4,7 @@ import simpleGit from "simple-git";
 import { generate, getAllFiles, uploadFile } from "./utils";
 import path from "path";
 import "dotenv/config";
-import redis from 'redis';
+const redis = require("redis");
 const publisher = redis.createClient();
 publisher.connect();
 
