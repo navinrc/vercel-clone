@@ -1,4 +1,6 @@
 import { createClient, commandOptions } from "redis";
+import { downloadS3Folder, copyFinalDist } from "./aws";
+import { buildProject } from "./utils";
 const subscriber = createClient();
 subscriber.connect();
 
@@ -9,7 +11,12 @@ const main = async () => {
       "build-queue",
       0
     );
-    console.log(response);
+    // @ts-ignore
+    const id = response.element;
+    await downloadS3Folder(`output/${id}`);
+    console.log("downloaded..");
+    await buildProject(id);
+    await copyFinalDist(id);
   }
 };
 main();
