@@ -25,7 +25,7 @@ app.put("/deploy", async (req, res) => {
   files.forEach(async (file) => {
     await uploadFile(file.slice(__dirname.length + 1), file);
   });
-  await new Promise(resolve => setTimeout(resolve, 5000));
+  await new Promise(resolve => setTimeout(resolve, 7000));
   publisher.lPush("build-queue", id);
   publisher.hSet("status", id, "uploaded");
   res.json({
