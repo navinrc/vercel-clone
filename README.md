@@ -4,7 +4,7 @@
 > This repo is not meant for production. Please use it with caution.
 This repo contains code for my video where I code-along a vercel-like deployment service. This is meant to be coded in a beginner friendly way and not for ready for production use.
 
-See [my youtube video](https://www.youtube.com/watch?v=c8_tafixiAs) to follow along the code.
+See [video](https://www.youtube.com/watch?v=c8_tafixiAs) to follow along the code.
 
 ## Tech Stack
 
